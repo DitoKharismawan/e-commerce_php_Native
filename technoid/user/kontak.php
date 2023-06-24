@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '../function/kontak.php';
 
 if (isset($_POST['kontak'])) {

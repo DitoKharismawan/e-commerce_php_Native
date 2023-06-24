@@ -1,5 +1,8 @@
 <?php
-require '../config/config.php';
+session_start();
+require '../function/tentang.php';
+$judul = tentang()['judul'];
+
 
 
 require 'templates/header.php';

@@ -1,5 +1,6 @@
 <?php
 require 'koneksi.php';
+require 'auth.php';
 require 'bantuan.php';
 require 'cart.php';
 
@@ -14,7 +15,7 @@ function produk()
         $produks[] = $produk;
     }
     $data = [
-        'judul' => 'Catri produk sesukamu di TechnoID',
+        'judul' => 'Cari produk sesukamu di TechnoID',
         'produk' => $produks,
     ];
     return $data;
