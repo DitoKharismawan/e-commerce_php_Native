@@ -2,7 +2,7 @@
 
 <footer>
     <div class="footer bg-secondary text-light">
-        <div class="row px-5 py-3">
+        <div class="row px-5 py-3 nomargin">
             <div class="col-sm ">
                 <h6>Kategori</h6>
                 <p class="foot-item ml-3">
@@ -36,7 +36,7 @@
             </div>
         </div>
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center nomargin">
             <div class="text-center border-top w-100 py-3 bg-secondary">
                 <span class="text-light ">&copy CopyRight | <?= author . " (" . date('Y') . ")" ?></span>
             </div>

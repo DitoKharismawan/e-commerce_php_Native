@@ -7,9 +7,22 @@
 Front End
 ---- */
 
+.nomargin {
+  margin: 0;
+}
+
+.bg-secondary-lighter {
+ background-color: #c9cacb;
+}
+
 .navbar-toggler {
   border: none;
   cursor: pointer;
+}
+
+.navbar-toggler .fa {
+  color: #ffc107;
+  border-color: #ffc107;
 }
 
 .navbar a {
@@ -17,6 +30,11 @@ Front End
 }
 .navbar a:hover {
   background-color: #f8f9fa;
+  transition: all ease-out 300ms;
+}
+
+.navbar a:hover.text-white {
+  color: #000 !important;
   transition: all ease-out 300ms;
 }
 
@@ -28,7 +46,8 @@ Front End
 }
 .topbar a {
   text-decoration: none;
-  color: #6c757d;
+  /* color: #6c757d; */
+  /* color: #FFF; */
   font-size: 12px;
 }
 
@@ -116,7 +135,7 @@ Back End
   display: none;
 }
 
-@media (max-width: 970.98px) {
+@media (max-width: 992.98px) {
   /* ---- 
 Untuk Mobile
 Front End
@@ -139,11 +158,19 @@ Front End
   .navbar .collapse .cari {
     display: none;
   }
+
+  .navbar .collapsing .cari {
+    display: none;
+  }
+
   .content {
     display: block;
     width: 90%;
     margin-left: 40px;
     transition: all ease-in-out 600ms;
+  }
+  .navbar-main {
+    padding-left: 15px;
   }
   /* ---- 
 Back End

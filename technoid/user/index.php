@@ -62,7 +62,7 @@ require 'templates/header.php';
     </div>
 </div>
 
-<div class="row bg-light my-5 p-3" style="margin: 0 -50px">
+<!-- <div class="row bg-light my-5 p-3" style="margin: 0 -50px">
     <div class="col">
         <div class="row">
 
@@ -74,7 +74,7 @@ require 'templates/header.php';
             <img class="w-100" src="<?= url ?>assets/images/pages/ban4.png" alt="">
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- Produk Baru -->
 <div class="mt-5">

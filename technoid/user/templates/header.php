@@ -20,17 +20,17 @@ if (isset($_POST['masuk'])) {
 
     <title><?= $judul ?></title>
 </head>
-<div class="topbar fixed-top">
+<div class="topbar fixed-top bg-secondary">
 
     <?php if (isset($_SESSION['nama'])) : ?>
-        <p class="text-right pr-2 bg-white">
-            <a href="<?= url ?>user/profil.php" class="text-secondary"><?= $_SESSION['nama'] ?></a> |
-            <a href="<?= url ?>user/keluar.php">Keluar</a>
+        <p class="text-right pr-2 text-white">
+            <a href="<?= url ?>user/profil.php" class="text-white"><?= $_SESSION['nama'] ?></a> |
+            <a class="text-white" href="<?= url ?>user/keluar.php">Keluar</a>
         </p>
     <?php else : ?>
-        <p class="text-right pr-2 bg-white">
-            <a class="text-secondary" style="cursor: pointer" data-toggle="modal" data-target="#masuk">Masuk</a> |
-            <a href="<?= url ?>user/daftar.php">Daftar</a>
+        <p class="text-right pr-2 text-white">
+            <a class="text-white" style="cursor: pointer" data-toggle="modal" data-target="#masuk">Masuk</a> |
+            <a class="text-white" href="<?= url ?>user/daftar.php">Daftar</a>
         </p>
     <?php endif; ?>
 
@@ -44,37 +44,37 @@ if (isset($_POST['masuk'])) {
         <?php unset($_SESSION['sukses']) ?>
     <?php endif; ?>
 
-    <nav class="navbar navbar-expand-lg shadow-sm bg-white ">
+    <nav class="navbar navbar-expand-lg shadow-sm ">
         <div id="nav-btn" class="navbar-toggler m-auto" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
             <i id="icon" class="fa fa-bars"></i>
         </div>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav col-6">
+            <ul class="navbar-nav navbar-main col-lg-6 col-md-12">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= url ?>user/index.php">Beranda </a>
+                    <a class="nav-link text-white" href="<?= url ?>user/index.php">Beranda </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= url ?>user/produk.php">Produk</a>
+                    <a class="nav-link text-white" href="<?= url ?>user/produk.php">Produk</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= url ?>user/tentang.php">Tentang</a>
+                    <a class="nav-link text-white" href="<?= url ?>user/tentang.php">Tentang</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= url ?>user/kontak.php">Kontak</a>
+                    <a class="nav-link text-white" href="<?= url ?>user/kontak.php">Kontak</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#masuk" </button> <a class="nav-link" href="<?= url ?>daftar.php">Daftar</a>
-                </li>
+                </li> -->
             </ul>
             <div class="cari col-6">
                 <form class="form-inline float-right" action="<?= url ?>user/produk.php/?cari=">
                     <input name="cari" class="form-control mr-sm-2 " type="search" placeholder="Cari" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
         </div>
     </nav>
 </div>
 
-<body class="bg-light">
+<body class="bg-secondary-lighter">
     <div class="container  bg-white p-5">
