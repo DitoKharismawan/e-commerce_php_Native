@@ -35,10 +35,10 @@ function _validation($data)
         return $pesan;
     }
     if ($data['gambar']['error'] != 4) {
-        if ($data['gambar']['type'] == "image/jpg" || $data['gambar']['type'] == "image/jpeg" || $data['gambar']['type'] == "image/png") {
+        if ($data['gambar']['type'] == "image/jpg" || $data['gambar']['type'] == "image/jpeg" || $data['gambar']['type'] == "image/png" || $data['gambar']['type'] == "image/webp") {
             return true;
         }
-        $pesan = ['pesan' => 'Pilih ekstensi gambar ( JPEG, JPG, PNG ) ',];
+        $pesan = ['pesan' => 'Pilih ekstensi gambar ( JPEG, JPG, PNG, WebP ) ',];
         return $pesan;
     }
     $pesan = ['pesan' => 'Pilih gambar yang sesuai',];

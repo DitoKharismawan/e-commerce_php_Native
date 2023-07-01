@@ -59,7 +59,7 @@ require 'template_admin/header.php';
         <tbody>
             <?php foreach ($produk as $key => $value) : ?>
                 <tr>
-                    <th scope="row"><?= $key + 1 ?></th>
+                    <td scope="row"><span class="font-weight-bold"><?= $key + 1 ?></span></td>
                     <td>
                         <img src="<?= url . 'assets/images/produk/' . $value->gambar ?>" style="width: 80px" alt="">
                     </td>
