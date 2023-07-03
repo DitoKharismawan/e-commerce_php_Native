@@ -25,7 +25,7 @@ require 'template_admin/header.php';
             <div class="row">
                 <div class="form-group mx-2 col-sm-5 ">
                     <label for="nama">Nama</label>
-                    <input class="form-control" type="text" name="nama" id="nama" value="<?= (isset($_SESSION['nama'])) ? $_SESSION['nama'] :  "" ?>">
+                    <input class="form-control" type="text" name="nama" id="nama" value="<?= (isset($_SESSION['produk__nama'])) ? $_SESSION['produk__nama'] :  "" ?>">
                     <div class="invalid-feedback">Example invalid custom select feedback</div>
                 </div>
                 <div class="form-group mx-2 col-sm-5 ">

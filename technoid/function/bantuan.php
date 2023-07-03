@@ -9,7 +9,7 @@ function _validation($data)
 {
     //membuat penyimapanan data semetara agar Inputan yang diketikkan tidak hilang,
     //ketika validasi ada yang gagal
-    $_SESSION['nama'] = $data['nama'];
+    $_SESSION['produk__nama'] = $data['nama'];
     $_SESSION['harga'] = $data['harga'];
     $_SESSION['stok'] = $data['stok'];
     $_SESSION['deskripsi'] = $data['deskripsi'];
@@ -49,8 +49,8 @@ function _validation($data)
 function _hapusSession()
 {
     //ketika data lolos dari validasi maka session akan dihapus
-    if (isset($_SESSION['nama'])) {
-        unset($_SESSION['nama']);
+    if (isset($_SESSION['produk__nama'])) {
+        unset($_SESSION['produk__nama']);
     }
     if (isset($_SESSION['harga'])) {
         unset($_SESSION['harga']);

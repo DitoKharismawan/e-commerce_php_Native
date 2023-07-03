@@ -1,0 +1,6 @@
+Batasan Aplikasi
+- Hanya menjual pakaian berupa atasan, bawahan dan aksesoris
+- Tidak Memiliki fitur rating atau testimoni terhadap barang maupun komentar
+- Tidak memperhitungkan jarak dan waktu pengiriman beserta ongkos kirim
+- Tidak terdapat diskon barang
+- Tidak memiliki fitur chat

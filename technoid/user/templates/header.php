@@ -51,20 +51,20 @@ if (isset($_POST['masuk'])) {
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav navbar-main col-lg-6 col-md-12">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="<?= url ?>user/index.php">Beranda </a>
+                    <a class="nav-link text-white custom-fzise" href="<?= url ?>user/index.php">Beranda </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="<?= url ?>user/produk.php">Produk</a>
+                    <a class="nav-link text-white custom-fzise" href="<?= url ?>user/produk.php">Produk</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="<?= url ?>user/tentang.php">Tentang</a>
+                    <a class="nav-link text-white custom-fzise" href="<?= url ?>user/tentang.php">Tentang</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="<?= url ?>user/kontak.php">Kontak</a>
+                    <a class="nav-link text-white custom-fzise" href="<?= url ?>user/kontak.php">Kontak</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#masuk" </button> <a class="nav-link" href="<?= url ?>daftar.php">Daftar</a>
-                </li> -->
+                <li class="nav-item">
+                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#masuk" </button> <a class="nav-link" href="<?= url ?>daftar.php">Daftar</a> -->
+                </li> 
             </ul>
             <div class="cari col-6">
                 <form class="form-inline float-right" action="<?= url ?>user/produk.php/?cari=">

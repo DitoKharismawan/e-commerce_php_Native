@@ -1,4 +1,5 @@
 <?php
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -30,7 +31,10 @@
         <div class="topbar bg-primary py-2">
             <nav class="row navbar ">
                 <div class="col form-inline">
-                    <input id="input-cari" data-url="<?= $dataUrl ?>" class="form-control mr-sm-2" type="search" placeholder="Cari sekarang" name="cari">
+                    <!-- <?php if (!isset($disableSearch)) : ?>
+                        <input id="input-cari" data-url="<?= $dataUrl ?>" class="form-control mr-sm-2" type="search" placeholder="Cari sekarang" name="cari">
+                    <?php endif; ?> -->
+                        <input id="input-cari" data-url="<?= $dataUrl ?>" class="form-control mr-sm-2 <?php if (!isset($disableSearch)) { echo "visible"; } else { echo "invisible"; } ?>" type="search" placeholder="Cari sekarang" name="cari">
                 </div>
             </nav>
         </div>

@@ -11,6 +11,9 @@ $jmlPd = home()['jmlPd'];
 
 $transaksi = home()['trans'];
 
+// Mengapa fitur cari tdk berfungsi, karena di 'template_admin/header.php' kita perlu set variabel dataUrl dari caller, mungkin didisable dulu
+// $dataUrl = "transaksi";
+$disableSearch = true;
 require 'template_admin/header.php';
 ?>
 

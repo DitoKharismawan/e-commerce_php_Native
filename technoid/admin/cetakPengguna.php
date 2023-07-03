@@ -30,7 +30,7 @@ $pengguna = pengguna()['pengguna'];
 
 <body class="bg-light">
     <div id="pengguna" class="container my-5 bg-white py-3">
-        <h3 class="text-center pb-3 font-weight-bold">DATA PENGGUNA TECHNOID</h3>
+        <h3 class="text-center pb-3 font-weight-bold">DATA PENGGUNA WEDROBEID</h3>
         <h6 class="float-right">Cetak pada : <?= date('h:i:s, Y-m-d') ?></h6>
         <table class="table table-striped">
             <thead>

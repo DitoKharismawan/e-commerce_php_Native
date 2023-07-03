@@ -8,11 +8,14 @@ if (cekLoginAdmin() === false) {
 $id = $_GET['id'];
 $produk = detailProduk($id);
 $judul = $produk['judul'];
+print_r($_SESSION);
 
 // ---- Ubah Produk ----//
 if (isset($_POST['ubah'])) {
     ubahProduk($id, $_POST);
 }
+
+$disableSearch = true;
 
 require 'template_admin/header.php';
 ?>
@@ -32,7 +35,7 @@ require 'template_admin/header.php';
             <li class="list-group-item">Kategori : <?= $produk['produk']->kategori ?></li>
         </ul>
         <div class="card-body">
-            <button onclick="location.href=''" class="btn btn-sm btn-danger" class="card-link">Hapus</button>
+            <button onclick="hapusProduk(<?= $_GET['id'] ?>,'<?= $produk['produk']->nama ?>', '<?= url ?>')" class="btn btn-sm btn-danger" class="card-link">Hapus</button>
             <button class="ubah btn btn-sm btn-primary" href="#" class="card-link">Ubah</button>
         </div>
     </div>
@@ -45,44 +48,49 @@ require 'template_admin/header.php';
                 <div class="row">
                     <div class="form-group mx-2 col-sm-5 ">
                         <label for="nama">Nama</label>
-                        <input class="form-control " type="text" name="nama" id="nama" value="<?= (isset($_SESSION['nama']) ? $_SESSION['nama'] : $produk['produk']->nama) ?>">
+                        <input class="form-control " type="text" name="nama" id="nama" value="<?= (isset($_SESSION['produk__nama']) ? $_SESSION['produk__nama'] : $produk['produk']->nama) ?>">
                     </div>
                     <div class="form-group mx-2 col-sm-5 ">
-                        <label for="harga">harga</label>
+                        <label for="harga">Harga</label>
                         <input class="form-control " type="number" name="harga" id="harga" value="<?= (isset($_SESSION['harga']) ? $_SESSION['harga'] : $produk['produk']->harga) ?>">
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group mx-2 col-sm-5 ">
-                        <label for="kategori">kategori</label>
+                        <label for="kategori">Kategori</label>
                         <select class="form-control " name="kategori" id="">
-                            <option>--Pilih--</option>
-                            <option value="Ponsel">Ponsel</option>
-                            <option value="Laptop">Laptop</option>
-                            <option value="Komputer">Komputer</option>
+                            <option disabled selected>--Pilih--</option>
+                            <option value="Atasan" <?php echo $produk['produk']->kategori == 'Atasan' ? 'selected' : ''; ?>>Atasan</option>
+                            <option value="Bawahan" <?php echo $produk['produk']->kategori == 'Bawahan' ? 'selected' : ''; ?>>Bawahan</option>
+                            <option value="Aksesoris" <?php echo $produk['produk']->kategori == 'Aksesoris' ? 'selected' : ''; ?>>Aksesoris</option>
                         </select>
                     </div>
                     <div class="form-group mx-2 col-sm-5 ">
-                        <label for="stok">stok</label>
+                        <label for="stok">Stok</label>
                         <input class="form-control " type="number" name="stok" id="stok" value="<?= (isset($_SESSION['stok']) ? $_SESSION['stok'] : $produk['produk']->stok) ?>">
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group mx-2 col-sm-5 ">
-                        <label for="deskripsi">deskripsi</label>
+                        <label for="deskripsi">Deskripsi</label>
                         <textarea class="form-control " type="text" name="deskripsi" id="deskripsi"><?= (isset($_SESSION['deskripsi']) ? $_SESSION['deskripsi'] : $produk['produk']->deskripsi) ?></textarea>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="form-group mx-2 col-sm-3 ">
-                        <label for="gambar">gambar</label>
+                        <label for="gambar">Gambar</label>
                         <input class="form-control " type="file" name="gambar" id="gambar">
                     </div>
                 </div>
                 <input type="hidden" name="create" value="<?= $produk['produk']->create ?>">
                 <div class=" text-center my-3">
                     <button type="submit" name="ubah" class="btn btn-sm btn-primary w-25" class="card-link">Simpan</button>
-                    <a id="ubah-data-href" href="<?= url ?>admin/detailProduk.php/?id=<?= $produk['produk']->id_produk ?>" class="btn btn-sm btn-danger w-25" class="card-link">Batal</a>
+                    <a class="text-white" href="../produk.php">
+                        <button type="button" name="batal" class="btn btn-sm btn-secondary w-25">
+                            Batal
+                        </button>
+                    </a>
+                    <!-- <a id="ubah-data-href" href="<?= url ?>admin/detailProduk.php/?id=<?= $produk['produk']->id_produk ?>" class="btn btn-sm btn-danger w-25" class="card-link">Batal</a> -->
                 </div>
             </form>
         </div>

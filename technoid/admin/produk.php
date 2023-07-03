@@ -29,7 +29,7 @@ require 'template_admin/header.php';
     <div class="pesan"></div>
     <div class="judul my-3 mx-5 text-uppercase d-flex justify-content-between">
         <h5>Produk</h5>
-        <a href="<?= url ?>admin/tambahProduk.php" class="btn btn-sm btn-light mr-4">Tambah Produk</a>
+        <a href="<?= url ?>admin/tambahProduk.php" class="btn btn-sm btn-success mr-4 border border-light">+ Tambah Produk</a>
     </div>
     <ul class="list-group text-dark">
         <?php foreach ($produk as $key => $value) : ?>
@@ -70,9 +70,10 @@ require 'template_admin/header.php';
                     <td class="text-center px-0 ">
                         <div class="d-flex justify-content-center align-items-center">
                             <a href="<?= url ?>admin/detailProduk.php/?id=<?= $value->id_produk ?>" class="btn btn-sm btn-info">Detail</a>
-                            <form action="<?= url ?>admin/produk.php/?id=<?= $value->id_produk ?>" method="POST">
+                            <!-- <form action="<?= url ?>admin/produk.php/?id=<?= $value->id_produk ?>" method="POST">
                                 <button class="hapus btn btn-sm btn-danger ml-2" name="hapus">Hapus</button>
-                            </form>
+                            </form> -->
+                            <button class="hapus btn btn-sm btn-danger ml-2" name="hapus" onclick="hapusProduk(<?php echo $value->id_produk; ?>,'<?php echo $value->nama; ?>', '<?php echo url; ?>')">Hapus</button>
                         </div>
                     </td>
                 </tr>

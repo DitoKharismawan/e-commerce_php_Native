@@ -132,3 +132,65 @@ $(document).ready(function () {
   });
   
 });
+
+function hapusProduk(id, nama, urlhapus) {
+  Swal.fire(
+    {
+      icon: "question",
+      title: "Hapus Produk",
+      text: "Yakin Hapus " + nama,
+      showCancelButton: true,
+      confirmButtonColor: '#DD6B55',
+      confirmButtonText: 'Hapus',
+      cancelButtonText: "Batal"
+    }
+    // ,
+    // setTimeout(function () {
+    //   window.location.href =
+    //     "../produk.php/";
+    // }, 3000)
+  ).then(x => {
+    console.log(x);
+    const url = urlhapus + 'admin/produk.php/?id=' + id;
+    const data = { hapus: true };
+    if (x.isConfirmed) {
+      fetch(url, {
+        method: "POST",
+        mode: "cors", // no-cors, *cors, same-origin
+        cache: "no-cache", 
+        credentials: "same-origin", // include, *same-origin, omit
+        headers: {
+          // "Content-Type": "application/json",
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        redirect: "follow", // manual, *follow, error
+        referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        body: (new URLSearchParams(data)).toString(), // body data type must match "Content-Type" header
+      }).then((y) => {
+        Swal.fire(
+          {
+            icon: "info",
+            iconHtml: '<i id="icon" class="fa fa-trash"></i>',
+            title: "Terhapus",
+            text: nama + " telah dihapus",
+            timer: 3000,
+            timerProgressBar: true,
+            willClose: () => {
+               window.location.href = url + "/admin/produk.php";
+            }
+          }
+        )
+      }).catch((err) => {
+        Swal.fire(
+          {
+            icon: "error",
+            title: "Kesalahan",
+            text: "Terjadi Kesalahan saat menghapus " + nama,
+            timer: 3000,
+            timerProgressBar: true
+          }
+        )
+      });
+    }
+  });
+}

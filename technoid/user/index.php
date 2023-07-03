@@ -20,13 +20,17 @@ require 'templates/header.php';
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="<?= url ?>assets/images/pages/car-1.jpeg" class="d-block w-100" alt="...">
+            <img src="<?= url ?>assets/images/pages/car-1.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="<?= url ?>assets/images/pages/car-2.jpeg" class="d-block w-100" alt="...">
+            <img src="<?= url ?>assets/images/pages/car-2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="<?= url ?>assets/images/pages/car-3.jpg" class="d-block w-100" alt="...">
         </div>
     </div>
 </div>
