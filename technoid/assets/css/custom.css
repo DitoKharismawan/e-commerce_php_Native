@@ -17,6 +17,10 @@ Front End
  background-color: #c9cacb;
 }
 
+.custom-bg-1 {
+  background-color: #6c757d;
+ }
+
 .custom-break {
   white-space: break-spaces;
 }

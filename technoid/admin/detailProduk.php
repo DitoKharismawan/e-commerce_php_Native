@@ -19,7 +19,7 @@ $disableSearch = true;
 
 require 'template_admin/header.php';
 ?>
-<div class=" detail-produk p-3 mt-3 bg-primary text-light ">
+<div class=" detail-produk p-3 mt-3 custom-bg-1 text-light ">
     <div class="judul">
         <h5>Detail Produk <?= $produk['produk']->kategori . " " . $produk['produk']->nama ?></h5>
     </div>
@@ -27,7 +27,7 @@ require 'template_admin/header.php';
         <img style="" src=" <?= url ?>assets/images/produk/<?= $produk['produk']->gambar ?>" class="card-img-top m-auto w-25" alt="...">
         <div class="card-body border-top">
             <h5 class="card-title"><?= $produk['produk']->nama ?></h5>
-            <p class="card-text"><?= $produk['produk']->deskripsi ?></p>
+            <p class="card-text custom-break"><?= $produk['produk']->deskripsi ?></p>
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">Harga : Rp<?= number_format($produk['produk']->harga, 0) ?></li>

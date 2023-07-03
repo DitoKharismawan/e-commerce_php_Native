@@ -89,7 +89,8 @@ require 'templates/header.php';
 
                                 <form action="" method="POST">
                                     <td>
-                                        <input class="form-control w-100" min="1" max="50" type="number" name="kuantiti" value="<?= $value->kuantiti ?>">
+                                        <!-- <input class="form-control w-100" min="1" max="50" type="number" name="kuantiti" value="<?= $value->kuantiti ?>"> -->
+                                        <input class="form-control w-100" min="1" max="<?= is_null($value->stok) ? "50" : $value->stok ?>" type="number" name="kuantiti" value="<?= $value->kuantiti ?>">
                                     </td>
                                     <td>Rp<?= number_format($value->total, 0) ?></td>
                                     <td>

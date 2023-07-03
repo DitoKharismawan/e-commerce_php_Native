@@ -73,7 +73,7 @@ require 'templates/header.php'; ?>
                     <input type="hidden" name="gambar" value="<?= $produk->gambar ?>">
                     <input type="hidden" name="kategori" value="<?= $produk->kategori ?>">
                     <button name="cart" class="btn btn-sm btn-<?php echo $produk->stok > 0 ? 'success' : 'secondary'; ?>" <?php echo $produk->stok > 0 ? '' : 'disabled'; ?>>
-                            <?php echo $produk->stok > 0 ? 'Beli' : 'Habis'; ?>
+                            <?php echo $produk->stok > 0 ? '+Keranjang' : 'Habis'; ?>
                         </button>
                 </form>
             </div>

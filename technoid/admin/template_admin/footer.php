@@ -35,7 +35,10 @@
 </div>
 <footer>
     <div class="text-center py-3 bg-secondary">
-        <span class="text-light ">&copy Copyright | <?= author . " (" . date('Y') . ")" ?></span>
+        <span class="text-light ">
+            <!-- &copy Copyright  -->
+            Wedrobe ID
+            | <?= author . " (" . date('Y') . ")" ?></span>
     </div>
 </footer>
 
@@ -192,6 +195,7 @@
 <script src="<?= url ?>assets/js/sweetalert2.all.js" crossorigin="anonymous"></script>
 
 <!-- Custom Javascript -->
+<script type="text/javascript">window.rootUrl = '<?php echo url; ?>';</script>
 <script src="<?= url; ?>assets/js/custom.js" crossorigin="anonymous"></script>
 
 </body>

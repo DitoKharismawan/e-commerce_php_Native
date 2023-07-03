@@ -34,7 +34,8 @@ function ambilCart()
 
     $id = $_SESSION['iduser'];
     $carts = [];
-    $produk = mysqli_query($konek, "SELECT * FROM cart WHERE id_user='$id'");
+    // $produk = mysqli_query($konek, "SELECT * FROM cart WHERE id_user='$id'");
+    $produk = mysqli_query($konek, "SELECT * FROM cart c LEFT JOIN ( SELECT id_produk, stok FROM produk ) p ON c.id_produk = p.id_produk WHERE id_user='$id'");
     $subtotal = mysqli_query($konek, "SELECT SUM(total) as subtotal FROM cart WHERE id_user='$id'");
     $kuantiti = mysqli_query($konek, "SELECT SUM(kuantiti) as kuantiti FROM cart WHERE id_user='$id'");
 

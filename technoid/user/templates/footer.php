@@ -176,6 +176,7 @@
 <script src="<?= url ?>assets/js/bootstrap.min.js" crossorigin="anonymous"></script>
 <script src="<?= url ?>assets/js/sweetalert2.all.js" crossorigin="anonymous"></script>
 <!-- Custom Javascript -->
+<script type="text/javascript">window.rootUrl = '<?php echo url; ?>';</script>
 <script src="<?= url ?>assets/js/custom.js" crossorigin="anonymous"></script>
 
 </body>

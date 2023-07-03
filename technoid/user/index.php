@@ -59,7 +59,7 @@ require 'templates/header.php';
                         <input type="hidden" name="gambar" value="<?= $value->gambar ?>">
                         <input type="hidden" name="kategori" value="<?= $value->kategori ?>">
                         <button name="cart" class="btn btn-sm btn-<?php echo $value->stok > 0 ? 'success' : 'secondary'; ?>" <?php echo $value->stok > 0 ? '' : 'disabled'; ?>>
-                            <?php echo $value->stok > 0 ? 'Beli' : 'Habis'; ?>
+                            <?php echo $value->stok > 0 ? '+Keranjang' : 'Habis'; ?>
                         </button>
                     </form>
                 </div>
@@ -104,7 +104,9 @@ require 'templates/header.php';
                         <input type="hidden" name="kuantiti" value="1">
                         <input type="hidden" name="gambar" value="<?= $value->gambar ?>">
                         <input type="hidden" name="kategori" value="<?= $value->kategori ?>">
-                        <button name="cart" class="btn btn-sm btn-success">Beli</button>
+                        <button name="cart" class="btn btn-sm btn-<?php echo $value->stok > 0 ? 'success' : 'secondary'; ?>" <?php echo $value->stok > 0 ? '' : 'disabled'; ?>>
+                            <?php echo $value->stok > 0 ? '+Keranjang' : 'Habis'; ?>
+                        </button>
                     </form>
                 </div>
             </div>

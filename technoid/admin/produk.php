@@ -21,7 +21,7 @@ $dataUrl = "produk";
 require 'template_admin/header.php';
 
 ?>
-<div class="produk my-2 py-2 bg-primary text-light ">
+<div class="produk my-2 py-2 custom-bg-1 text-light ">
     <?php if (isset($_GET['pesan'])) : ?>
         <div id="sukses" class="<?= $_GET['pesan'] ?>"></div>
     <?php endif; ?>
