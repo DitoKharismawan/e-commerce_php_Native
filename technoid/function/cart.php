@@ -22,7 +22,8 @@ function tambahCart($post)
             '', '$id_user', '$id_produk', '$nama', '$harga', '$kuantiti', '$gambar', '$kategori', '$total'
             )");
     } else if (mysqli_num_rows($cek) > 0) {
-        mysqli_query($konek, "UPDATE cart SET kuantiti='$kuantitiBaru' WHERE id_produk='$id_produk'");
+        $totalBaru = $harga * $kuantitiBaru;
+        mysqli_query($konek, "UPDATE cart SET kuantiti='$kuantitiBaru', total=$totalBaru WHERE id_produk='$id_produk'");
     }
     $_SESSION['sukses'] = "Barang berhasil ditambahkan keranjang";
     return;
