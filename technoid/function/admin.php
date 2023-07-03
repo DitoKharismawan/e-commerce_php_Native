@@ -218,7 +218,7 @@ function ambilTransaksi()
     }
 
     $data = [
-        'judul' => "Transaki | Admin",
+        'judul' => "Transaksi | Admin",
         'trans' => $trans,
     ];
 

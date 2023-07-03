@@ -21,7 +21,8 @@ if (isset($_POST['masuk'])) {
     <title><?= $judul ?></title>
 </head>
 <div class="topbar fixed-top bg-secondary">
-
+    
+    <img src="<?= url ?>/assets/images/pages/logo.png" class="logo-pos">
     <?php if (isset($_SESSION['nama'])) : ?>
         <p class="text-right pr-2 text-white">
             <a href="<?= url ?>user/profil.php" class="text-white"><?= $_SESSION['nama'] ?></a> |

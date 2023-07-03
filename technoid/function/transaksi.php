@@ -27,6 +27,24 @@ function tambahTransaksi($post)
     $id_status = 0;
     $pesan = date('y-m-d h:i:s');
 
+    $carts = ambilCart()['carts'];
+    $i = 1;
+    $j = 1;
+    foreach ($carts as $value) {
+        $kuantiti = $post['kuantiti' . $i++];
+        $id_produk = $post['id_produk' . $j++];
+        $stok = mysqli_query($konek, "SELECT * FROM produk WHERE id_produk='$id_produk'");
+        $ambilStok = $stok->fetch_assoc();
+
+        $stokBaru = $ambilStok['stok'] - $kuantiti;
+        if (mysqli_num_rows($stok) > 0 && $stokBaru >= 0) {
+            mysqli_query($konek, "UPDATE produk SET stok='$stokBaru' WHERE id_produk='$id_produk'");
+        }
+        else {
+            echo "Stok Overdosis";
+            die;
+        }
+    }
 
     mysqli_query($konek, "INSERT INTO transaksi VALUES(
         '', '$id_pesan','$id_user',  '$pengirim', '$penerima', '$alamat', '$telepon', '$email', '$kuantiti_total', '$total_akhir', '$pembayaran', '$id_status', '$pesan', '', '' 
@@ -63,20 +81,6 @@ function tambahTransaksi($post)
         }
     }
 
-    $carts = ambilCart()['carts'];
-    $i = 1;
-    $j = 1;
-    foreach ($carts as $value) {
-        $kuantiti = $post['kuantiti' . $i++];
-        $id_produk = $post['id_produk' . $j++];
-        $stok = mysqli_query($konek, "SELECT * FROM produk WHERE id_produk='$id_produk'");
-        $ambilStok = $stok->fetch_assoc();
-
-        $stokBaru = $ambilStok['stok'] - $kuantiti;
-        if (mysqli_num_rows($stok) > 0) {
-            mysqli_query($konek, "UPDATE produk SET stok='$stokBaru' WHERE id_produk='$id_produk'");
-        }
-    }
     bersihkanCart();
 
     $_SESSION['sukses'] = "Transaksi berhasil. SIlahkan melakukan Pembayaran";

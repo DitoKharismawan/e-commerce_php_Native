@@ -41,7 +41,8 @@ require 'template_admin/header.php';
             </li>
         <?php endforeach; ?>
     </ul>
-    <table class="produk table table-striped ml-5 table-light ">
+    <div class="ml-5 table-container">
+    <table class="produk table table-striped table-light">
         <?php if (isset($_GET['message'])) : ?>
             <div class="pesan" data-pesan="<?= $_GET['message'] ?>"></div>
         <?php endif; ?>
@@ -80,6 +81,7 @@ require 'template_admin/header.php';
             <?php endforeach; ?>
         </tbody>
     </table>
+    </div>
 </div>
 
 <?php require 'template_admin/footer.php' ?>

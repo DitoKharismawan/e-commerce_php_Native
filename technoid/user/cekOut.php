@@ -46,7 +46,20 @@ require 'templates/header.php';
             <div class="row">
                 <div class="col-md-6 form-group">
                     <label for="pengirim">Pengirim</label>
-                    <input type="text" class="form-control" id="pengirim" name="pengirim">
+
+                    <!-- <input type="text" class="form-control" id="pengirim" name="pengirim"> -->
+                    <br>
+                    <input type="radio" name="pengirim" id="jne" value="jne"><label for="jne"><img src="<?= url ?>assets/images/pages/jne.png" class="logo-limit"> JNE</label>
+                    <br>
+                    <input type="radio" name="pengirim" id="sicepat" value="sicepat"><label for="sicepat"><img src="<?= url ?>assets/images/pages/sicepat.png" class="logo-limit"> SiCepat</label>
+                    <br>
+                    <input type="radio" name="pengirim" id="entaraja" value="entaraja"><label for="entaraja"><img src="<?= url ?>assets/images/pages/entaraja.jpeg" class="logo-limit"> entaraja</label>
+                    <!-- <select class="form-control" name="pengirim" id="pengirim">
+                            <option disabled selected>--Pilih--</option>
+                            <option value="jne" style="backgroud-image:url('">JNE</option>
+                            <option value="sicepat">SiCepat</option>
+                            <option value="entaraja">Entar Aja</option>
+                    </select> -->
                 </div>
                 <div class="col-md-6 form-group">
                     <label for="penerima">Penerima</label>

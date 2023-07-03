@@ -95,8 +95,8 @@ require 'templates/header.php';
                                     <td>
                                         <input type="hidden" name="idCart" value="<?= $value->id_cart ?>">
                                         <input type="hidden" name="harga" value="<?= $value->harga ?>">
-                                        <button name="hapusCart" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
-                                        <button name="ubahCart" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></button>
+                                        <button name="hapusCart" class="btn btn-sm btn-danger" title="Hapus produk dari keranjang"><i class="fa fa-trash"></i></button>
+                                        <button name="ubahCart" class="btn btn-sm btn-primary" title="Hitung Total Harga"><i class="fa fa-edit"></i></button>
                                     </td>
                                 </form>
 

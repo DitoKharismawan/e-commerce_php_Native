@@ -146,7 +146,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="card">
-                            <div class="card-header">
+                            <div class="card-header text-center">
                                 <img src="<?= url ?>assets/images/user/<?= $value->image ?>" alt="">
                             </div>
                             <ul class="list-group list-group-flush">
@@ -157,9 +157,9 @@
                                 <li class="list-group-item">
                                     <h5 class="font-weight-bold">Email</h5><?= $value->email ?>
                                 </li>
-                                <li class="list-group-item">
+                                <!-- <li class="list-group-item">
                                     <h5 class="font-weight-bold">Kata Sandi</h5><?= $value->sandi ?>
-                                </li>
+                                </li> -->
                                 <li class="list-group-item">
                                     <h5 class="font-weight-bold">Bergabung pada</h5><?= $value->createat ?>
                                 </li>

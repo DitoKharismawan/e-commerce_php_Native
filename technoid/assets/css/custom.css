@@ -1,3 +1,5 @@
+@import url('dropdown.css');
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +15,29 @@ Front End
 
 .bg-secondary-lighter {
  background-color: #c9cacb;
+}
+
+.custom-break {
+  white-space: break-spaces;
+}
+
+.logo-pos {
+  border-radius: 4rem;
+  width: 14rem;
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 2rem;
+}
+
+.logo-limit {
+  max-width: 2rem;
+  max-height: 2rem;
+}
+
+.table-container {
+  width: 100%;
+  padding-right: 7.5rem;
 }
 
 .navbar-toggler {
@@ -126,7 +151,7 @@ Back End
   transition: all ease-in-out 600ms;
 }
 .produk .table {
-  width: 90%;
+  width: 100%;
 }
 .produk .table td {
   vertical-align: middle;
@@ -171,6 +196,10 @@ Front End
   }
   .navbar-main {
     padding-left: 15px;
+  }
+
+  .logo-pos {
+    display: none;
   }
   /* ---- 
 Back End

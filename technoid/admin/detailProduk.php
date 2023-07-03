@@ -8,7 +8,7 @@ if (cekLoginAdmin() === false) {
 $id = $_GET['id'];
 $produk = detailProduk($id);
 $judul = $produk['judul'];
-print_r($_SESSION);
+// print_r($_SESSION);
 
 // ---- Ubah Produk ----//
 if (isset($_POST['ubah'])) {

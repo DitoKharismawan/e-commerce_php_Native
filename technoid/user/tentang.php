@@ -11,16 +11,18 @@ require 'templates/header.php';
 <div class="row bg-white border p-2 mt-5">
     <div class="col-md ml-3">
         <h1>Tentang Kami</h1>
-        <p class="lead">Kami menjual berbagai perangkat elektronik tepatnya diperangkat Komputer, Laptop, dan Smartphone
-            Kami mulai membuka toko kami pada tahun 2019 bulan Januari dimana saata itu kami hanya menjual 1 jenis produk yaitu Smartphone
-            dan di pertengahan tahun 2020 kami menambahkan 2 jenis barang yaitu berbagai hardware untuk kebutuhan perakitan PC, dan juga
-            mejual berbagai jenis laptop untk mid level
-        </p>
+        <p class="lead custom-break">
+Wedrobe ID
+Kelompok 4
+
+Dito Kharismawan | 202043500038
+Ramdani | 202043500216
+Stefano Bima | 202043500396</p>
         <hr>
         <div class="row ml-1">
             <div class="w-100">
                 <h3><i class="fa fa-map-marker"></i>Alamat</h3>
-                <p>Lopawon / Kebobang<br>Wonosari / Malang<br>Jawa Timur<br>Indonesia<br><strong>Bayu Pamungkas</strong></p>
+                <p>Gedong<br>Pasar Rebo<br>Jakarta Selatan<br>Indonesia<br><strong>Kelompok 4</strong></p>
             </div>
             <!-- /.col-sm-4-->
             <div class="">

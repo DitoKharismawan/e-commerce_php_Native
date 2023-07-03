@@ -6,9 +6,9 @@
             <div class="col-sm ">
                 <h6>Kategori</h6>
                 <p class="foot-item ml-3">
-                    <a href="<?= url ?>user/produk.php/?kategori=ponsel">Ponsel</a><br>
-                    <a href="<?= url ?>user/produk.php/?kategori=laptop">Laptop</a><br>
-                    <a href="<?= url ?>user/produk.php/?kategori=komputer">Komputer</a><br>
+                    <a href="<?= url ?>user/produk.php/?kategori=Atasan">Atasan</a><br>
+                    <a href="<?= url ?>user/produk.php/?kategori=Bawahan">Bawahan</a><br>
+                    <a href="<?= url ?>user/produk.php/?kategori=Aksesoris">Aksesoris</a><br>
                 </p>
             </div>
             <div class="col-sm ">
@@ -38,7 +38,10 @@
 
         <div class="row justify-content-center nomargin">
             <div class="text-center border-top w-100 py-3 bg-secondary">
-                <span class="text-light ">&copy CopyRight | <?= author . " (" . date('Y') . ")" ?></span>
+                <span class="text-light ">
+                    <!-- &copy CopyRight  -->
+                    Wedrobe ID
+                    | <?= author . " (" . date('Y') . ")" ?></span>
             </div>
         </div>
     </div>

@@ -20,7 +20,7 @@ require 'templates/header.php'; ?>
     <div class="col-md-5">
         <div class="card">
             <div class="card-header d-flex justify-content-center">
-                <img src="<?= url ?>assets/images/produk/<?= $produk->gambar ?>" alt="">
+                <img src="<?= url ?>assets/images/produk/<?= $produk->gambar ?>" alt="" class="w-100">
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">
@@ -64,7 +64,7 @@ require 'templates/header.php'; ?>
             </div>
             <div class="card-body">
                 <h6 class="card-title">Deskripsi produk :</h6>
-                <p class="card-text"><?= $produk->deskripsi ?></p>
+                <p class="card-text custom-break"><?= $produk->deskripsi ?></p>
                 <form method="POST" action="">
                     <input type="hidden" name="id_produk" value="<?= $produk->id_produk ?>">
                     <input type="hidden" name="nama" value="<?= $produk->nama ?>">
@@ -72,7 +72,9 @@ require 'templates/header.php'; ?>
                     <input type="hidden" name="kuantiti" value="1">
                     <input type="hidden" name="gambar" value="<?= $produk->gambar ?>">
                     <input type="hidden" name="kategori" value="<?= $produk->kategori ?>">
-                    <button name="cart" class="btn btn-sm btn-success">Beli</button>
+                    <button name="cart" class="btn btn-sm btn-<?php echo $produk->stok > 0 ? 'success' : 'secondary'; ?>" <?php echo $produk->stok > 0 ? '' : 'disabled'; ?>>
+                            <?php echo $produk->stok > 0 ? 'Beli' : 'Habis'; ?>
+                        </button>
                 </form>
             </div>
         </div>
