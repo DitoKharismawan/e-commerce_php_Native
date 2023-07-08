@@ -41,7 +41,7 @@ function tambahTransaksi($post)
             mysqli_query($konek, "UPDATE produk SET stok='$stokBaru' WHERE id_produk='$id_produk'");
         }
         else {
-            echo "Stok Overdosis";
+            echo "Stok Tidak Cukup untuk produk " . $ambilStok['nama'] . ". Anda membeli sebanyak " . $kuantiti . " dari " . $ambilStok['stok'] . " Tersisa ";
             die;
         }
     }

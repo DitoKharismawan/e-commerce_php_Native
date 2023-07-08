@@ -1,5 +1,6 @@
 <?php
 session_start();
+require '../function/auth.php';
 require '../function/detail.php';
 
 if (isset($_GET['id'])) {

@@ -103,6 +103,9 @@
                                 <label for="nominal">Nominal</label>
                                 <input class="form-control" type="number" name="nominal" id="nominal">
                             </div>
+                            <!-- <div class="form-group"> -->
+                                <label class="form-control">No Rekening Tujuan : 1310033444334 (Mandiri)</label>
+                            <!-- </div> -->
                             <div class="form-group">
                                 <label for="gambar">Unggah bukti pembayaran</label>
                                 <input class="form-control" type="file" name="gambar" id="gambar">

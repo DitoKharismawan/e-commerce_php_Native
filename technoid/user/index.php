@@ -2,6 +2,7 @@
 require '../function/home.php';
 $judul = home()['judul'];
 $produk = home()['produk'];
+$produklaris = home()['produklaris'];
 
 //keranjang
 if (isset($_POST['cart'])) {
@@ -44,6 +45,38 @@ require 'templates/header.php';
             <div class="col-md card-produk shadow-sm m-1  bg-white">
                 <div class="card-img" style=" height:50%;">
                     <img src="<?= url ?>assets/images/produk/<?= $value->gambar ?>" class="img-fluid " style="width: 100%;" alt="...">
+                </div>
+                <div class="card-body" style="height: 25%;">
+                    <h6 class=""><?= $value->nama ?></h6>
+                    <p>Rp<?= number_format($value->harga, 0) ?></p>
+                </div>
+                <div class="d-flex justify-content-around p-2 w-75 border-top m-auto">
+                    <a href="<?= url ?>user/detail.php/?id=<?= $value->id_produk ?>" class="btn btn-sm btn-info mr-1 ">Detail</a>
+                    <form method="POST" action="">
+                        <input type="hidden" name="id_produk" value="<?= $value->id_produk ?>">
+                        <input type="hidden" name="nama" value="<?= $value->nama ?>">
+                        <input type="hidden" name="harga" value="<?= $value->harga ?>">
+                        <input type="hidden" name="kuantiti" value="1">
+                        <input type="hidden" name="gambar" value="<?= $value->gambar ?>">
+                        <input type="hidden" name="kategori" value="<?= $value->kategori ?>">
+                        <button name="cart" class="btn btn-sm btn-<?php echo $value->stok > 0 ? 'success' : 'secondary'; ?>" <?php echo $value->stok > 0 ? '' : 'disabled'; ?>>
+                            <?php echo $value->stok > 0 ? '+Keranjang' : 'Habis'; ?>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+
+<!-- Produk Baru -->
+<div class="mt-5">
+    <h5 class="text-uppercase">Produk Terlaris</h5>
+    <div class="produk-front border-top bg-light">
+        <?php foreach ($produklaris as $value) : ?>
+            <div class="col-md card-produk shadow-sm m-1  bg-white">
+                <div class="card-img" style=" height:50%;">
+                    <img src="<?= url ?>assets/images/produk/<?= $value->gambar ?>" class="img-fluid " style="width: 100%; max-height: 100%;" alt="...">
                 </div>
                 <div class="card-body" style="height: 25%;">
                     <h6 class=""><?= $value->nama ?></h6>

@@ -14,7 +14,7 @@ function tambahCart($post)
     $total = $harga * $kuantiti;
 
 
-    var_dump($cek = mysqli_query($konek, "SELECT * FROM cart WHERE id_produk='$id_produk'"));
+    var_dump($cek = mysqli_query($konek, "SELECT * FROM cart WHERE id_produk='$id_produk' AND id_user='$id_user'"));
     $cekKuantiti = mysqli_fetch_assoc($cek);
     $kuantitiBaru = ($cekKuantiti['kuantiti'] + $kuantiti);
     if (mysqli_num_rows($cek) === 0) {

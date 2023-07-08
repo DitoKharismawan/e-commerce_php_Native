@@ -1,7 +1,6 @@
 
 TRUNCATE TABLE transaksi_detail;
 TRUNCATE TABLE transaksi;
-TRUNCATE TABLE status;
 TRUNCATE TABLE pembayaran;
 TRUNCATE TABLE penjualan;
 TRUNCATE TABLE kontak;

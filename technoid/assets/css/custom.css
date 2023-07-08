@@ -30,6 +30,10 @@ Front End
   background-color: #FFF;
 }
 
+.custom-bg-1 {
+  background-color: var(--wedrobebg2);
+}
+
 .custom-fzise {
   font-weight: bold;
   font-family: sans-serif;

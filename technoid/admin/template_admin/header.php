@@ -28,7 +28,7 @@
     <?php require 'sidebar.php' ?>
 
     <div class="content">
-        <div class="topbar custom-bg-1 py-2">
+        <div class="topbar custom-bg2 py-2">
             <nav class="row navbar nomargin">
                 <div class="col form-inline">
                     <!-- <?php if (!isset($disableSearch)) : ?>
