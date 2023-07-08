@@ -29,7 +29,7 @@
 
     <div class="content">
         <div class="topbar custom-bg-1 py-2">
-            <nav class="row navbar ">
+            <nav class="row navbar nomargin">
                 <div class="col form-inline">
                     <!-- <?php if (!isset($disableSearch)) : ?>
                         <input id="input-cari" data-url="<?= $dataUrl ?>" class="form-control mr-sm-2" type="search" placeholder="Cari sekarang" name="cari">

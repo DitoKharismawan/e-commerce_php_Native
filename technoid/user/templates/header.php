@@ -20,18 +20,18 @@ if (isset($_POST['masuk'])) {
 
     <title><?= $judul ?></title>
 </head>
-<div class="topbar fixed-top bg-secondary">
+<div class="topbar fixed-top custom-bg3">
     
     <img src="<?= url ?>/assets/images/pages/logo.png" class="logo-pos">
     <?php if (isset($_SESSION['nama'])) : ?>
-        <p class="text-right pr-2 text-white">
-            <a href="<?= url ?>user/profil.php" class="text-white"><?= $_SESSION['nama'] ?></a> |
-            <a class="text-white" href="<?= url ?>user/keluar.php">Keluar</a>
+        <p class="text-right pr-2 custom-text1">
+            <a href="<?= url ?>user/profil.php" class="custom-text1"><?= $_SESSION['nama'] ?></a> |
+            <a class="custom-text1" href="<?= url ?>user/keluar.php">Keluar</a>
         </p>
     <?php else : ?>
-        <p class="text-right pr-2 text-white">
-            <a class="text-white" style="cursor: pointer" data-toggle="modal" data-target="#masuk">Masuk</a> |
-            <a class="text-white" href="<?= url ?>user/daftar.php">Daftar</a>
+        <p class="text-right pr-2 custom-text1">
+            <a class="custom-text1" style="cursor: pointer" data-toggle="modal" data-target="#masuk">Masuk</a> |
+            <a class="custom-text1" href="<?= url ?>user/daftar.php">Daftar</a>
         </p>
     <?php endif; ?>
 
@@ -52,16 +52,16 @@ if (isset($_POST['masuk'])) {
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav navbar-main col-lg-6 col-md-12">
                 <li class="nav-item">
-                    <a class="nav-link text-white custom-fzise" href="<?= url ?>user/index.php">Beranda </a>
+                    <a class="nav-link custom-text1 custom-fzise" href="<?= url ?>user/index.php">Beranda </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white custom-fzise" href="<?= url ?>user/produk.php">Produk</a>
+                    <a class="nav-link custom-text1 custom-fzise" href="<?= url ?>user/produk.php">Produk</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white custom-fzise" href="<?= url ?>user/tentang.php">Tentang</a>
+                    <a class="nav-link custom-text1 custom-fzise" href="<?= url ?>user/tentang.php">Tentang</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white custom-fzise" href="<?= url ?>user/kontak.php">Kontak</a>
+                    <a class="nav-link custom-text1 custom-fzise" href="<?= url ?>user/kontak.php">Kontak</a>
                 </li>
                 <li class="nav-item">
                     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#masuk" </button> <a class="nav-link" href="<?= url ?>daftar.php">Daftar</a> -->
@@ -70,12 +70,12 @@ if (isset($_POST['masuk'])) {
             <div class="cari col-6">
                 <form class="form-inline float-right" action="<?= url ?>user/produk.php/?cari=">
                     <input name="cari" class="form-control mr-sm-2 " type="search" placeholder="Cari" aria-label="Search">
-                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
         </div>
     </nav>
 </div>
 
-<body class="bg-secondary-lighter">
+<body class="custom-bg1">
     <div class="container  bg-white p-5">

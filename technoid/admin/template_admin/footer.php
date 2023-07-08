@@ -34,7 +34,7 @@
 </div>
 </div>
 <footer>
-    <div class="text-center py-3 bg-secondary">
+    <div class="text-center py-3 custom-bg2">
         <span class="text-light ">
             <!-- &copy Copyright  -->
             Wedrobe ID

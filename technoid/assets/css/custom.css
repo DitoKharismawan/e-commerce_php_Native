@@ -1,5 +1,11 @@
 @import url('dropdown.css');
 
+:root {
+  --wedrobebg1: #CBD4E4;
+  --wedrobebg2: #3D5476;
+  --wedrobebg3: #FFF;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,13 +19,25 @@ Front End
   margin: 0;
 }
 
-.bg-secondary-lighter {
- background-color: #c9cacb;
+.custom-bg1 {
+ background-color: #CBD4E4;
 }
 
-.custom-bg-1 {
+.custom-bg2 {
+  background-color: #3D5476;
+}
+.custom-bg3 {
+  background-color: #FFF;
+}
+
+.custom-fzise {
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+/* .custom-bg-1 {
   background-color: #6c757d;
- }
+ } */
 
 .custom-break {
   white-space: break-spaces;
@@ -27,7 +45,7 @@ Front End
 
 .logo-pos {
   border-radius: 4rem;
-  width: 14rem;
+  height: 6rem;
   position: absolute;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -37,6 +55,11 @@ Front End
 .logo-limit {
   max-width: 2rem;
   max-height: 2rem;
+}
+
+.logo-admin {
+  position: relative;
+  filter: invert(0.6);
 }
 
 .table-container {
@@ -56,20 +79,31 @@ Front End
 
 .navbar a {
   color: black;
+  border-bottom: solid 3px #FFF;
+  /* border-bottom-color: ; */
+  border-bottom-color: var(--wedrobebg3);
 }
 .navbar a:hover {
-  background-color: #f8f9fa;
+  /* border-bottom: solid 3px --wedrobebg2; */
+  border-bottom-color: var(--wedrobebg2);
+  /* background-color: var(--wedrobebg2); */
+  
   transition: all ease-out 300ms;
 }
 
-.navbar a:hover.text-white {
-  color: #000 !important;
+.navbar a:hover.custom-fsize {
+  color: #FFF !important;
   transition: all ease-out 300ms;
 }
 
 .navbar-nav li:last-child {
   display: none;
 }
+
+.topbar {
+  border-bottom: solid 0.3rem #444;
+}
+
 .topbar p {
   margin-bottom: 0;
 }
@@ -97,7 +131,7 @@ Front End
   display: flex;
   flex-direction: column;
   padding: 0 0;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 /*  */
 

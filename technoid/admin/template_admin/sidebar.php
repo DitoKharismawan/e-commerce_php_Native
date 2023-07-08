@@ -4,6 +4,7 @@
     </div>
     <div class="wrap-content">
         <div class="head my-5 text-center">
+            <img src="<?= url ?>/assets/images/pages/logo.png" class="logo-pos logo-admin">
             <h4 class="text-secondary">Menu Admin</h4>
         </div>
         <ul class="list text-left">

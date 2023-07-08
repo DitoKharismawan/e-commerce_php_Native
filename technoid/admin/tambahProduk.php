@@ -10,6 +10,7 @@ if (isset($_POST['simpan'])) {
 }
 
 $judul = 'Tambah Produk | Admin';
+$disableSearch = true;
 require 'template_admin/header.php';
 ?>
 

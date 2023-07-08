@@ -21,7 +21,16 @@ require 'template_admin/header.php';
 ?>
 <div class=" detail-produk p-3 mt-3 custom-bg-1 text-light ">
     <div class="judul">
-        <h5>Detail Produk <?= $produk['produk']->kategori . " " . $produk['produk']->nama ?></h5>
+        <div class="row nomargin">
+            <h5 class="col">Detail Produk <?= $produk['produk']->kategori . " " . $produk['produk']->nama ?></h5>
+            <div class="col-auto">
+                <button onclick="hapusProduk(<?= $_GET['id'] ?>,'<?= $produk['produk']->nama ?>', '<?= url ?>')" class="btn btn-sm btn-danger" class="card-link">Hapus</button>
+                <button class="ubah btn btn-sm btn-primary" href="#" class="card-link">Ubah</button>
+            </div>
+        </div>
+        <!-- <div class="card-body"> -->
+            
+        <!-- </div> -->
     </div>
     <div class="card w-100 text-dark my-3" style="width: 18rem;">
         <img style="" src=" <?= url ?>assets/images/produk/<?= $produk['produk']->gambar ?>" class="card-img-top m-auto w-25" alt="...">
@@ -34,10 +43,6 @@ require 'template_admin/header.php';
             <li class="list-group-item">Stok : <?= $produk['produk']->stok ?></li>
             <li class="list-group-item">Kategori : <?= $produk['produk']->kategori ?></li>
         </ul>
-        <div class="card-body">
-            <button onclick="hapusProduk(<?= $_GET['id'] ?>,'<?= $produk['produk']->nama ?>', '<?= url ?>')" class="btn btn-sm btn-danger" class="card-link">Hapus</button>
-            <button class="ubah btn btn-sm btn-primary" href="#" class="card-link">Ubah</button>
-        </div>
     </div>
     <div id="ubah-data">
         <div class="card w-100 text-dark ">

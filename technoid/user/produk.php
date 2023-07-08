@@ -31,6 +31,12 @@ require 'templates/header.php';
 </div>
 <!-- Produk Baru -->
 <div class="row border-top">
+    <!-- <?php if (sizeof($produk) == 0) : ?>
+        `$_GET['cari']` "Tidak ditemukan "
+    <?php endif; ?> -->
+    <?php if (sizeof($produk) == 0)
+        echo $_GET['cari'] . " Tidak ditemukan ";
+    ?>
     <?php foreach ($produk as $value) : ?>
         <div class="col-sm-3 my-2 card shadow-sm bg-white">
             <div class="card-img" style=" height:50%;">

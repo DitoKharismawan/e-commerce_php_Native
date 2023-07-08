@@ -58,7 +58,7 @@ $(document).ready(function () {
       },
       setTimeout(function () {
         window.location.href =
-          "http://localhost/native/technoid/admin/produk.php/";
+        rootUrl + "/admin/produk.php/";
       }, 3000)
     );
   }
@@ -72,7 +72,7 @@ $(document).ready(function () {
         text: cartSukses,
       },setTimeout(function () {
         window.location.href =
-          "http://localhost/native/technoid/user/profil.php/";
+        rootUrl + "/user/profil.php/";
       }, 2000));
   }
 
@@ -98,9 +98,11 @@ $(document).ready(function () {
     );
   });
 
+
+  // Buat Halaman Admin -> filter transaksi selesai
   $("#btn-transaksi").click(function () {
     $.get(
-      "http://localhost/native/technoid/ajax_search/transaksi.ajax.php/",
+      rootUrl + "/ajax_search/transaksi.ajax.php/",
       function (data) {
         $(".transaksi.table").html(data);
       }
@@ -113,7 +115,7 @@ $(document).ready(function () {
       $("." + url + ".table").html(page);
     } else {
       $.get(
-        "http://localhost/native/technoid/ajax_search/" +
+        rootUrl + "/ajax_search/" +
           url +
           ".ajax.php/?cari=" +
           keyword,

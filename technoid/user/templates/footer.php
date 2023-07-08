@@ -1,7 +1,7 @@
 </div>
 
 <footer>
-    <div class="footer bg-secondary text-light">
+    <div class="footer custom-bg2 text-light">
         <div class="row px-5 py-3 nomargin">
             <div class="col-sm ">
                 <h6>Kategori</h6>
@@ -37,7 +37,7 @@
         </div>
 
         <div class="row justify-content-center nomargin">
-            <div class="text-center border-top w-100 py-3 bg-secondary">
+            <div class="text-center border-top w-100 py-3 custom-bg2">
                 <span class="text-light ">
                     <!-- &copy CopyRight  -->
                     Wedrobe ID
