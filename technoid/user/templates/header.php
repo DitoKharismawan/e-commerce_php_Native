@@ -78,4 +78,4 @@ if (isset($_POST['masuk'])) {
 </div>
 
 <body class="custom-bg1">
-    <div class="container  bg-white p-5">
+    <div class="container bg-white p-5 custom-container">

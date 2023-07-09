@@ -21,7 +21,22 @@ require 'templates/header.php'; ?>
     <div class="col-md-5">
         <div class="card">
             <div class="card-header d-flex justify-content-center">
-                <img src="<?= url ?>assets/images/produk/<?= $produk->gambar ?>" alt="" class="w-100">
+
+            <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="<?= url ?>assets/images/produk/<?= $produk->gambar ?>" alt="" class="w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="<?= url ?>assets/images/produk/<?= $produk->gambar ?>" alt="" class="w-100" style="transform: rotate(90deg);">
+                    </div>
+                </div>
+            </div>
+
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">

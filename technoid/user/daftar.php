@@ -37,7 +37,7 @@ require 'templates/header.php';
                     <div class="form-group ">
                         <label for="password1">Kata Sandi</label>
                         <div class="input-group">
-                            <input type="text" class="form-control border-right-0" id="password1" required name="sandi1" autocomplete="off" type="password">
+                            <input type="password" class="form-control border-right-0" id="password1" required name="sandi1" autocomplete="off">
                         </div>
                     </div>
                     <div class="form-group ">

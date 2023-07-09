@@ -39,6 +39,10 @@ Front End
   font-family: sans-serif;
 }
 
+.custom-container {
+  min-height: calc(100vh - 233px);
+}
+
 /* .custom-bg-1 {
   background-color: #6c757d;
  } */
@@ -48,7 +52,7 @@ Front End
 }
 
 .logo-pos {
-  border-radius: 4rem;
+  /* border-radius: 4rem; */
   height: 6rem;
   position: absolute;
   margin-left: 50%;
@@ -77,8 +81,8 @@ Front End
 }
 
 .navbar-toggler .fa {
-  color: #ffc107;
-  border-color: #ffc107;
+  color: var(--wedrobebg2);
+  border-color: var(--wedrobebg2);
 }
 
 .navbar a {
