@@ -208,9 +208,9 @@ Back End
 
 .cari-mobile {
   margin-top: 40px;
-  position: relative;
+  /* position: relative; */
   display: none;
-  top: 8px;
+  /* top: 8px; */
 }
 
 .cari-mobile .my-2 {
@@ -237,13 +237,13 @@ Front End
   .navbar-nav li:last-child {
     display: block;
   }
-  /* .navbar .collapse .cari {
+  .navbar .collapse .cari {
     display: none;
-  } */
+  }
 
-  /* .navbar .collapsing .cari {
+  .navbar .collapsing .cari {
     display: none;
-  } */
+  }
 
   .cari-mobile {
     display: block;

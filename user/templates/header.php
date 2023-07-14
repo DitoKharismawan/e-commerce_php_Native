@@ -79,9 +79,11 @@ if (isset($_POST['masuk'])) {
 
 <body class="custom-bg1">
     <div class="container bg-white p-5 custom-container">
+    <div class="row">
     <div class="cari-mobile col-12">
         <form class="d-flex flex-row float-right" action="<?= url ?>user/produk.php/?cari=">
             <input name="cari" class="form-control mr-sm-2 " type="search" placeholder="Cari" aria-label="Search">
             <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
         </form>
+    </div>
     </div>
