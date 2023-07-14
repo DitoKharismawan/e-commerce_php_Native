@@ -4,10 +4,10 @@
 define('hostname', 'localhost');
 define('username', 'root');
 define('password', '');
-define('database', 'tekno');
+define('database', 'wedrobeid');
 
 /*----- Url -----*/
-define('url', 'http://localhost/native/technoid/');
+define('url', 'http://localhost/wedrobeid/');
 
 /*----- Author -----*/
 define('author', 'Kelompok 4');
